@@ -5,7 +5,7 @@ import os
 from core.scanner import SASTScanner
 
 def main():
-    parser = argparse.ArgumentParser(description="RexSAST: High-Velocity Static Analysis")
+    parser = argparse.ArgumentParser(description="ArrowTech-SAST: High-Velocity Static Analysis")
     parser.add_argument("path", help="Directory or file to scan", default=".", nargs="?")
     parser.add_argument("--git", action="store_true", help="Scan only uncommitted git changes")
     args = parser.parse_args()

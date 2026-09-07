@@ -1,4 +1,4 @@
-# RexSAST Engine
+# ArrowTech-SAST Engine
 
 A hyper-optimized, lightweight Static Application Security Testing (SAST) engine designed for high-velocity execution in resource-constrained environments (like Android/Termux).
 
