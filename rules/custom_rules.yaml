@@ -1,0 +1,21 @@
+rules:
+  - id: BANNED_FUNCTION_PRINT
+    type: regex
+    pattern: 'print\('
+    description: 'Use of print() instead of proper logging.'
+    severity: LOW
+    extensions: ['.py']
+
+  - id: AWS_ACCESS_KEY
+    type: regex
+    pattern: 'AKIA[0-9A-Z]{16}'
+    description: 'Hardcoded AWS Access Key ID.'
+    severity: CRITICAL
+    extensions: ['.py', '.js', '.env', '.json']
+    
+  - id: PRIVATE_KEY
+    type: regex
+    pattern: '-----BEGIN (RSA|EC|DSA|OPENSSH) PRIVATE KEY-----'
+    description: 'Exposed Private Cryptographic Key.'
+    severity: CRITICAL
+    extensions: ['.py', '.js', '.env', '.json', '.txt', '.pem', '.key']
